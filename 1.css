@@ -1,1 +1,18 @@
-
+body{
+    
+    background-color:rgb(252, 86, 3);
+}
+#number{
+    height: 720px;
+    width: 820px;
+    background-color:rgb(255, 204, 0);
+    margin-left: 320px;
+    margin-top: 15px;
+}
+#num{
+    background-color: rgb(3, 252, 244);
+    width: 400px;
+    height: 500px;
+    margin-left:200px ;
+    
+}

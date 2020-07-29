@@ -2,49 +2,91 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Calculator</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="1.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   </head>
   <body>
-    <script type="text/javascript">
-      function add()
-      {
+    <div id="number">
+<div id="num">
+  <table>
+    <tr>
+      <td>
+        <label for="f">First Number:</label>
+    </td>
+    <td>
+      <input type="number" id="f" placeholder="Enter Your Number "> <br>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label for="s">Second Number:</label>
+    </td>
+    <td><input type="number" id="s" placeholder="Enter Your Number "> <br></td>
+  </tr>
 
-          var l1 = parseInt(f.value);
-          var l2 = parseInt(s.value);
-          var t = l1 + l2;
-          document.getElementById('tot').value=t;
-      }
-      function sub()
-      {
+  </table>
+  
+  
+  
+   
+<button type="submit" onclick="add()"> addition</button> 
+<button type="submit" onclick='sub()'> subtraction</button> 
+<button type="submit" onclick='mul()'> multiplication</button> 
+<button type="submit" onclick='div()'> division</button> 
+<!-- <input type="text" readonly id="tot"> -->
+<h1 id="tot"></h1>
+</div>
+</div>
 
-          var l1 = f.value;
-          var l2 = s.value;
-          var t = l1 - l2;
-          document.getElementById('tot').value=t;
-      }
-      function mul()
-      {
 
-          var l1 = f.value;
-          var l2 = s.value;
-          var t = l1 * l2;
-          document.getElementById('tot').value=t;
-      }
-      function div()
-      {
 
-          var l1 = f.value;
-          var l2 = s.value;
-          var t = l1 / l2;
-          document.getElementById('tot').value=t;
-      }
-    </script>
-    ENTER FIRST NUMBER: <input type="number" id="f"> <br>
-    ENTER second NUMBER: <input type="number" id="s"> <br>
-<button type="submit" onclick="add()"> addition</button> <br>
-<button type="submit" onclick='sub()'> subtraction</button> <br>
-<button type="submit" onclick='mul()'> multiplication</button> <br>
-<button type="submit" onclick='div()'> division</button> <br>
-<input type="text" readonly id="tot">
+<script type="text/javascript">
+ var userName = prompt("Enter Your Full Name")
+        var split = userName.split(" ");
+        var name1 = split[0];
+        var name2 = split[1];
+        var formattedName1 = name1.slice(0,1).toUpperCase() + name1.slice(1).toLowerCase();
+        var formattedName2 = name2.slice(0,1).toUpperCase() + name2.slice(1).toLowerCase();
+        var perfectName =  formattedName1  + " " + formattedName2;
+        
+  function add()
+  {
+
+      var l1 = parseInt(f.value);
+      var l2 = parseInt(s.value);
+      var t = l1 + l2;
+      // document.getElementById('tot').value=t;
+      document.getElementById('tot').innerHTML=("Hey!" + perfectName + " Your Answer Is " + t)
+  }
+  function sub()
+  {
+
+      var l1 = f.value;
+      var l2 = s.value;
+      var t = l1 - l2;
+      // document.getElementById('tot').value=t;
+      document.getElementById('tot').innerHTML=("Hey!" + perfectName + " Your Answer Is " + t)
+  }
+  function mul()
+  {
+
+      var l1 = f.value;
+      var l2 = s.value;
+      var t = l1 * l2;
+      // document.getElementById('tot').value=t;
+      document.getElementById('tot').innerHTML=("Hey!" + perfectName + " Your Answer Is " + t)
+  }
+  function div()
+  {
+
+      var l1 = f.value;
+      var l2 = s.value;
+      var t = l1 / l2;
+      // document.getElementById('tot').value=t;
+      document.getElementById('tot').innerHTML=("Hey!" + perfectName + " Your Answer Is " + t)
+  }
+</script>
     </body>
 </html>
