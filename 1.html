@@ -5,6 +5,46 @@
     <title></title>
   </head>
   <body>
-    hello.
-  </body>
+    <script type="text/javascript">
+      function add()
+      {
+
+          var l1 = f.value;
+          var l2 = s.value;
+          var t = l1 + l2;
+          document.getElementById('tot').value=t;
+      }
+      function sub()
+      {
+
+          var l1 = f.value;
+          var l2 = s.value;
+          var t = l1 - l2;
+          document.getElementById('tot').value=t;
+      }
+      function mul()
+      {
+
+          var l1 = f.value;
+          var l2 = s.value;
+          var t = l1 * l2;
+          document.getElementById('tot').value=t;
+      }
+      function div()
+      {
+
+          var l1 = f.value;
+          var l2 = s.value;
+          var t = l1 / l2;
+          document.getElementById('tot').value=t;
+      }
+    </script>
+    ENTER FIRST NUMBER: <input type="number" id="f"> <br>
+    ENTER second NUMBER: <input type="number" id="s"> <br>
+<button type="submit" onclick="add()"> addition</button> <br>
+<button type="submit" onclick='sub()'> subtraction</button> <br>
+<button type="submit" onclick='mul()'> multiplication</button> <br>
+<button type="submit" onclick='div()'> division</button> <br>
+<input type="text" readonly id="tot">
+    </body>
 </html>
